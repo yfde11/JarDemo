@@ -1,9 +1,13 @@
 package tw.msxiao;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("hello world");
+        Logger logger = Logger.getLogger(Main.class);
+        BasicConfigurator.configure();
+        logger.info("hello world");
     }
 }
